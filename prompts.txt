@@ -1,0 +1,31 @@
+prompt 1:[Skeleton request]
+
+write a skeleton code for for a playwright scraper (in scraper.py file) using python (async) that:
+
+1. Scrapes top 5 entertainment articles from entertainment page 
+2. Scrapes cartoon of the day from homepage
+3.  Save to output.json matching the expected format
+
+See @notes.md for all selectors (found from DevTools inspection.) , page links and expected format of output
+
+Tips:
+1.Use headless=False – Watch the browser to debug issues visually
+2. Handle Nepali text – The website uses Nepali (Devanagari script); use ensure_ascii=False when writing JSON
+3. Check for lazy loading – Some images may load dynamically; you might need to scroll or wait
+4. Use try/except blocks – Wrap element access in error handling for robustness
+5.Use async Playwright (async_playwright)
+6. Use locators, not query_selectors
+7.Handle multiple authors per card
+8.Handle missing elements gracefully (return None, don't crash)
+
+give me the skeleton with function stubs and comments. I will fill in the extraction logic myself.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+prompt 2: [Cartoon rewrite request]
+
+rewrite only the scrape_cartoon_of_the_day function, keep everything else unchanged
+
+ive updated the cartoon selectors and page links in @notes.md (now scraping from cartoon page instead of homepage)
+
+use same patterns as rest of the code
